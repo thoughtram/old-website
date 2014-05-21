@@ -282,31 +282,50 @@ module.exports = function (grunt) {
         // By default, your `index.html`'s <!-- Usemin block --> will take care of
         // minification. These next options are pre-configured if you do not wish
         // to use the Usemin blocks.
-        // cssmin: {
-        //     dist: {
-        //         files: {
-        //             '<%= config.dist %>/styles/main.css': [
-        //                 '.tmp/styles/{,*/}*.css',
-        //                 '<%= config.app %>/styles/{,*/}*.css'
-        //             ]
-        //         }
-        //     }
-        // },
-        // uglify: {
-        //     dist: {
-        //         files: {
-        //             '<%= config.dist %>/scripts/scripts.js': [
-        //                 '<%= config.dist %>/scripts/scripts.js'
-        //             ]
-        //         }
-        //     }
-        // },
-        // concat: {
-        //     dist: {}
-        // },
+        cssmin: {
+            dist: {
+                files: {
+                    '<%= config.dist %>/styles/main.css': [
+                        '.tmp/styles/{,*/}*.css',
+                        '<%= config.app %>/styles/{,*/}*.css'
+                    ]
+                }
+            }
+        },
+        uglify: {
+            dist: {
+                files: {
+                    '<%= config.dist %>/scripts/scripts.js': [
+                        '<%= config.dist %>/scripts/scripts.js'
+                    ]
+                }
+            }
+        },
+        concat: {
+            dist: {}
+        },
 
         // Copies remaining files to places other tasks can use
         copy: {
+            distDe: {
+                files: [{
+                    expand: true,
+                    dot: true,
+                    cwd: '<%= config.dist %>',
+                    dest: '<%= config.dist %>/de/',
+                    src: [
+                        'images/**/*',
+                        'scripts/**/*',
+                        'styles/**/*'
+                    ]
+                }, {
+                    expand: true,
+                    dot: true,
+                    cwd: '.',
+                    src: ['bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/*.*'],
+                    dest: '<%= config.dist %>/de'
+                }]
+            },
             dist: {
                 files: [{
                     expand: true,
@@ -419,12 +438,13 @@ module.exports = function (grunt) {
         'modernizr',
         'rev',
         'usemin',
-        'htmlmin'
+        'htmlmin',
+        'copy:distDe'
     ]);
 
     grunt.registerTask('default', [
         'newer:jshint',
-        'test',
+        //'test',
         'build'
     ]);
 };
