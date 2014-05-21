@@ -107,7 +107,7 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
     }
 
     p {
-        font-size: 1.3em;
+        font-size: 1.2em;
         margin-top: 1em;
         font-weight: 200;
         line-height: 1.5;
@@ -149,8 +149,20 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 }
 
 .who-we-are {
+    position: relative;
     h2 {
         padding: 0.4em 0.6em;
+    }
+    &:before {
+        position: absolute;
+        content: '';
+        bottom: -1.5em;
+        width: 3em;
+        height: 3em;
+        background: hsl(357, 100%, 71%);
+        left: 50%;
+        margin-left: -1.5em;
+        border-radius: 50%;
     }
 }
 
@@ -164,37 +176,108 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 }
 
 .trainings-list-item {
-    margin-top: 0.5em;
+    margin-top: 1em;
 
     &:first-child {
         margin-top: 3em;
     }
 }
 
-.training {
-    h3 {
-        position: relative;
-        margin: 0;
-        background-color: #6FB4C7;
-        color: #fff;
-        padding: 0.5em 0.7em;
-        padding-top: 0.6em;
-        font-weight: 200;
-        font-size: 1.2em;
-        text-transform: uppercase;
+.training .training-info {
+    display: none;
+}
 
-        &:before {
-            position: absolute;
-            content: '';
-            width: 0.6em;
-            height: 0.6em;
-            right: 0.7em;
-            border-width: 0.4em;
-            border-color: hsl(0, 100%, 100%) hsla(0, 0%, 0%, 0) hsla(0, 0%, 0%, 0) hsla(0, 0%, 0%, 0);
-            border-style: solid;
-            top: 1em;
+.training-headline {
+    position: relative;
+    margin: 0;
+    background-color: #6FB4C7;
+    color: #fff;
+    padding: 0.5em 0.7em;
+    padding-top: 0.6em;
+    font-weight: 200;
+    font-size: 1.4em;
+    text-transform: uppercase;
+
+    &:before {
+        position: absolute;
+        content: '';
+        width: 0.6em;
+        height: 0.6em;
+        right: 0.7em;
+        border-width: 0.4em;
+        border-color: hsl(0, 100%, 100%) hsla(0, 0%, 0%, 0) hsla(0, 0%, 0%, 0) hsla(0, 0%, 0%, 0);
+        border-style: solid;
+        top: 1em;
+    }
+}
+
+.training--info-visible {
+    .training-info {
+        display: block;
+    }
+    .training-headline:before {
+        border-color: hsla(0, 0%, 0%, 0) hsla(0, 0%, 0%, 0) hsl(0, 100%, 100%) hsla(0, 0%, 0%, 0);
+        top: 0.6em;
+    }
+}
+
+.training-info {
+    padding: 1em;
+    background: #fff;
+
+    p {
+        margin-top: 1em;
+        &:first-child {
+            margin-top: 0;
         }
     }
+
+    h4 {
+        font-size: 1.6em;
+        margin-top: 1em;
+        margin-bottom: 0;
+    }
+
+    ul {
+        margin-left: 0;
+        padding-left: 0;
+        margin-top: 1em;
+        list-style: none;
+        font-size: 1.2em;
+        font-weight: bold;
+
+        li {
+            margin-top: 0.8em;
+        }
+
+        ul {
+            list-style: square;
+            margin-left: 1em;
+            margin-top: 0.8em;
+            font-weight: 200;
+            font-size: 1em;
+
+            li {
+                margin-top: 0.2em;
+            }
+        }
+    }
+}
+
+.training-pre-info {
+    display: inline-block;
+    width: 49%;
+    background: hsl(357, 100%, 71%);
+    text-align: center;
+    color: hsl(0, 100%, 100%);
+    padding: 0.5em 0em;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+.map {
+    margin-top: 1em;
+    width: 100%;
 }
 
 .profile {
@@ -224,6 +307,10 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
            -moz-transform: rotateZ(-5deg);
                 transform: rotateZ(-5deg);
     }
+}
+
+.form-tickets {
+    margin-top: 1em;
 }
 
 .profile-info {
@@ -258,7 +345,21 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 
     p {
         text-transform: uppercase;
-        font-size: 1.8em;
+        font-size: 1.4em;
+        font-weight: 200;
         margin: 0;
+        text-align: center;
     }
+}
+
+.footer-logo {
+  background-image: url('../images/toughtram_logo_250px.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100px auto;
+  background-color: hsl(0, 100%, 100%);
+  text-indent: -7000px;
+  padding: 2em 3em;
+  display: inline-block;
+  margin: 0 auto;
 }
