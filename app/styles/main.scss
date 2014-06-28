@@ -495,6 +495,25 @@ body {
     margin-top: 0.8em;
 }
 
+.training-special-guest-avatar {
+    margin-top: 2em;
+}
+.training-special-guest-picture {
+    width: 70%;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.training-special-guest-name {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 0.8em;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
 .listing {
     list-style: square;
     margin-left: 1.3em;
@@ -969,6 +988,17 @@ body {
         }
     }
 
+    .training-special-guest-avatar {
+        margin: 0 auto;
+        margin-top: 2em;
+        width: 20em;
+    }
+
+    .training-special-guest-picture {
+        margin: 0;
+        width: 100%;
+    }
+
     .sponsors-list__item {
         margin-top: 2.5em;
     }
@@ -996,7 +1026,6 @@ body {
     .container {
         width: 850px;
     }
-
 
     .site-section {
         padding: 8em 0;
@@ -1081,6 +1110,24 @@ body {
 
     .training__info h4 {
         font-size: 1.5em;
+    }
+
+    .training-special-guest-avatar {
+        display: inline-block;
+        width: 280px;
+        margin-right: 4em;
+        margin-left: 2em;
+    }
+
+    .training-special-guest-name {
+        display: inline-block;
+    }
+
+    .training-special-guest-info {
+        display: inline-block;
+        width: 350px;
+        vertical-align: top;
+        margin-top: 3em;
     }
 
     .code-of-conduct article {
