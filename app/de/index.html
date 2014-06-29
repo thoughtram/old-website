@@ -204,11 +204,60 @@
                                     </li>
                                 </ul>
                                 <h4>Preise und Buchung</h4>
-                                <p style="text-align: center;"><strong>Der Ticketverkauf startet bald!</strong></p>
-<form action="http://thoughtram.us8.list-manage.com/subscribe/post?u=dfbb1507fbced5a20d9dc5698&amp;id=ad0b3db245" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form" target="_blank" novalidate>
-                                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your E-Mail" required>
-                                    <div style="position: absolute; left: -5000px;"><input type="text" name="b_dfbb1507fbced5a20d9dc5698_ad0b3db245" tabindex="-1" value=""></div>
-                                    <div class="clear"><input type="submit" value="Benachrichtige mich!" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                                <p>Der reguläre Preis pro Tag beträgt <strong>400.00 € + 19% MwSt</strong>. Tage können separat gebucht werden. Der reguläre Preis für beide Tage in Kombination beträgt <strong>750.00 € + 19% MwSt</strong>.</p>
+                                <p>Wir limitieren diesen Workshop auf 12 Plätze pro Tag. Daraus ergeben sich 24 Tagestickets. Die ersten 8 Tickets gibt es zum
+                                 <strong>Early Bird Preis</strong> für nur <strong>350.00 € + 19% MwSt</strong> pro Tag beziehungsweise <strong>650.00 € + 19% MwSt</strong> für beide Tage kombiniert.</p>
+
+                                <p>Du kannst entweder mit PayPal bezahlen oder im nächsten Schritt noch zwischen Kreditkarte und Lastschrift wählen. Bei Problemen mit der Buchung schreib uns bitte eine E-Mail an <a href="mailto:hello@thoughtram.io">hello@thoughtram.io</a>.
+                                </p>
+
+                                <form class="form-tickets" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                    <ul class="pricing-form">
+                                        <li class="pricing-form__row">
+                                            <label class="pricing-form__label" for="attendes">Teilnehmer:</label>
+                                            <select name="quantity" id="attendees" class="pricing-form__select">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </li>
+                                        <li class="pricing-form__row">
+                                            <label class="pricing-form__label" for="workshops">Workshops:</label>
+                                            <select name="os0" id="workshops" class="pricing-form__select">
+                                                <option value="git060914">Tag 1 (350.00 € + 19% MwSt.)</option>
+                                                <option value="git070914">Tag 2 (350.00 € + 19% MwSt.)</option>
+                                                <option value="git06_070914">Tag 1 + Tag 2 (650.00 € + 19% MwSt.)</option>
+                                            </select>
+                                        </li>
+                                        <li class="pricing-form__row">
+                                            <input type="hidden" name="cmd" value="_xclick">
+                                            <input type="hidden" name="business" value="65J64BS2T3WTY">
+                                            <input type="hidden" name="lc" value="DE">
+                                            <input type="hidden" name="item_name" value="git workshop 09-2014">
+                                            <input type="hidden" name="cbt" value="return to thoughtram site">
+                                            <input type="hidden" name="tax_rate" value="19">
+                                            <input type="hidden" name="currency_code" value="EUR">
+                                            <input type="hidden" name="button_subtype" value="services">
+                                            <input type="hidden" name="no_note" value="0">
+                                            <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+
+                                            <input type="hidden" name="on0" value="Tage">
+                                            <input type="hidden" name="option_select0" value="git060914">
+                                            <input type="hidden" name="option_amount0" value="350">
+                                            <input type="hidden" name="option_select1" value="git070914">
+                                            <input type="hidden" name="option_amount1" value="350">
+                                            <input type="hidden" name="option_select2" value="git06_070914">
+                                            <input type="hidden" name="option_amount2" value="650">
+                                            <input type="hidden" name="option_index" value="0">
+
+                                            <input type="hidden" name="return" value="http://thoughtram.io">
+                                            <input type="hidden" name="cancel_return" value="http://thoughtram.io">
+                                            <input type="hidden" name="notify_url" value="http://booking.thoughtram.io/booking-notify">
+                                            <input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
+                                            <img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
+                                        </li>
+                                    </ul>
                                 </form>
 
                             </div>
