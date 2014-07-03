@@ -749,6 +749,26 @@ body {
     margin: 2em 0 0 0;
 }
 
+.footer__languages {
+    list-style: none;
+    margin: 2em 0 0 0;
+    padding: 0;
+}
+
+.footer__languages__item {
+    display: inline-block;
+    width: 49%;
+    text-align: left;
+    padding: 0 0.5em;
+
+    &:first-child {
+        text-align: right;
+    }
+
+    a {
+        color: #888
+    }
+}
 
 .scroll-top:hover {
     color: #fff;
@@ -1161,6 +1181,17 @@ body {
 
     .footer__logo-line {
         margin-top: 4em;
+    }
+    .footer__socialize__item {
+        width: 24.2%;
+    }
+
+    .footer__languages {
+        margin-top: 3em;
+    }
+
+    .footer__languages__item {
+        width: 49.7%;
     }
 
     .scroll-top {
